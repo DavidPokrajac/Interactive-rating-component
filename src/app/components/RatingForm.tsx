@@ -13,8 +13,12 @@ export default function RatingForm() {
     return (
         <form onSubmit={onSubmitHandler}>
             <div>
+                <label htmlFor="grade-one" className="visuallyhidden">
+                    1
+                </label>
                 <input
                     type="number"
+                    id="grade-one"
                     value={1}
                     readOnly
                     onClick={() => setNumberClicked(1)}
@@ -27,8 +31,12 @@ export default function RatingForm() {
                             : {}
                     }
                 />
+                <label htmlFor="grade-two" className="visuallyhidden">
+                    2
+                </label>
                 <input
                     type="number"
+                    id="grade-two"
                     value={2}
                     readOnly
                     onClick={() => setNumberClicked(2)}
@@ -41,8 +49,12 @@ export default function RatingForm() {
                             : {}
                     }
                 />
+                <label htmlFor="grade-three" className="visuallyhidden">
+                    3
+                </label>
                 <input
                     type="number"
+                    id="grade-three"
                     value={3}
                     readOnly
                     onClick={() => setNumberClicked(3)}
@@ -55,8 +67,12 @@ export default function RatingForm() {
                             : {}
                     }
                 />
+                <label htmlFor="grade-four" className="visuallyhidden">
+                    4
+                </label>
                 <input
                     type="number"
+                    id="grade-four"
                     value={4}
                     readOnly
                     onClick={() => setNumberClicked(4)}
@@ -69,8 +85,12 @@ export default function RatingForm() {
                             : {}
                     }
                 />
+                <label htmlFor="grade-five" className="visuallyhidden">
+                    5
+                </label>
                 <input
                     type="number"
+                    id="grade-five"
                     value={5}
                     readOnly
                     onClick={() => setNumberClicked(5)}

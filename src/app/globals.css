@@ -1,0 +1,145 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --light-grey: hsl(217, 12%, 63%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--light-grey);
+    background: var(--very-dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    font-family: inherit;
+    display: inline-block;
+    width: 45px;
+    text-align: center;
+    background-color: hsla(216, 12%, 54%, 0.2);
+    border: none;
+    padding: 1em 1em;
+    color: var(--light-grey);
+    border-radius: 50%;
+}
+
+input[type="number"]:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
+}
+
+input[type="number"]:focus {
+    outline: none;
+}
+
+.card {
+    max-width: 24rem;
+    background-color: var(--dark-blue);
+    border-radius: 1.5em;
+    padding: 2em;
+}
+
+h1 {
+    color: var(--white);
+    line-height: 1.6;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    font-family: inherit;
+    border: none;
+    background-color: var(--orange);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.75em;
+    border-radius: 5em;
+}
+
+button:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    cursor: pointer;
+}
+
+form > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.thank-you {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.thank-you h1 {
+    margin-bottom: 0.4em;
+}
+
+.thank-you span {
+    color: var(--orange);
+    display: inline-block;
+    margin: 2em 0;
+    background-color: hsla(216, 12%, 54%, 0.2);
+    padding: 0.35em 1.25em;
+    border-radius: 20px;
+}
+
+.thank-you-img {
+    margin: 0 auto;
+    display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+}

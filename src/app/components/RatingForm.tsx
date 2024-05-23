@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function RatingForm() {
@@ -10,15 +10,19 @@ export default function RatingForm() {
         router.push("/thank-you?rating=" + numberClicked);
     }
 
-    function selectedInputStyles(rate: number) {
-        if (numberClicked === rate) {
-            return {
-                backgroundColor: "hsl(216, 12%, 54%)",
-                color: "white",
-            };
-        }
-        return {};
-    }
+    const selectedInputStyles = useCallback(
+        (rate: number) => {
+            console.log("JUZ KOLBAK");
+            if (numberClicked === rate) {
+                return {
+                    backgroundColor: "hsl(216, 12%, 54%)",
+                    color: "white",
+                };
+            }
+            return {};
+        },
+        [numberClicked]
+    );
 
     return (
         <form onSubmit={onSubmitHandler}>

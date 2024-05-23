@@ -10,6 +10,16 @@ export default function RatingForm() {
         router.push("/thank-you?rating=" + numberClicked);
     }
 
+    function selectedInputStyles(rate: number) {
+        if (numberClicked === rate) {
+            return {
+                backgroundColor: "hsl(216, 12%, 54%)",
+                color: "white",
+            };
+        }
+        return {};
+    }
+
     return (
         <form onSubmit={onSubmitHandler}>
             <div>
@@ -22,14 +32,7 @@ export default function RatingForm() {
                     value={1}
                     readOnly
                     onClick={() => setNumberClicked(1)}
-                    style={
-                        numberClicked === 1
-                            ? {
-                                  backgroundColor: "hsl(216, 12%, 54%)",
-                                  color: "white",
-                              }
-                            : {}
-                    }
+                    style={selectedInputStyles(1)}
                 />
                 <label htmlFor="grade-two" className="visuallyhidden">
                     2
@@ -40,14 +43,7 @@ export default function RatingForm() {
                     value={2}
                     readOnly
                     onClick={() => setNumberClicked(2)}
-                    style={
-                        numberClicked === 2
-                            ? {
-                                  backgroundColor: "hsl(216, 12%, 54%)",
-                                  color: "white",
-                              }
-                            : {}
-                    }
+                    style={selectedInputStyles(2)}
                 />
                 <label htmlFor="grade-three" className="visuallyhidden">
                     3
@@ -58,14 +54,7 @@ export default function RatingForm() {
                     value={3}
                     readOnly
                     onClick={() => setNumberClicked(3)}
-                    style={
-                        numberClicked === 3
-                            ? {
-                                  backgroundColor: "hsl(216, 12%, 54%)",
-                                  color: "white",
-                              }
-                            : {}
-                    }
+                    style={selectedInputStyles(3)}
                 />
                 <label htmlFor="grade-four" className="visuallyhidden">
                     4
@@ -76,14 +65,7 @@ export default function RatingForm() {
                     value={4}
                     readOnly
                     onClick={() => setNumberClicked(4)}
-                    style={
-                        numberClicked === 4
-                            ? {
-                                  backgroundColor: "hsl(216, 12%, 54%)",
-                                  color: "white",
-                              }
-                            : {}
-                    }
+                    style={selectedInputStyles(4)}
                 />
                 <label htmlFor="grade-five" className="visuallyhidden">
                     5
@@ -94,14 +76,7 @@ export default function RatingForm() {
                     value={5}
                     readOnly
                     onClick={() => setNumberClicked(5)}
-                    style={
-                        numberClicked === 5
-                            ? {
-                                  backgroundColor: "hsl(216, 12%, 54%)",
-                                  color: "white",
-                              }
-                            : {}
-                    }
+                    style={selectedInputStyles(5)}
                 />
             </div>
             <button type="submit" disabled={numberClicked === 0}>

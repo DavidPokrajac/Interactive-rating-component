@@ -1,0 +1,30 @@
+/* Chrome, Safari, Edge, Opera */
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.input {
+    -moz-appearance: textfield;
+    font-family: inherit;
+    display: inline-block;
+    width: 45px;
+    text-align: center;
+    background-color: hsla(216, 12%, 54%, 0.2);
+    border: none;
+    padding: 1em 1em;
+    color: var(--light-grey);
+    border-radius: 50%;
+}
+
+.input:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.input:focus {
+    outline: none;
+}

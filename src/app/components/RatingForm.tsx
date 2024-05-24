@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
+import styles from "../styles/RatingForm.module.css";
 
 export default function RatingForm() {
     const [numberClicked, setNumberClicked] = useState(0);
@@ -12,7 +13,6 @@ export default function RatingForm() {
 
     const selectedInputStyles = useCallback(
         (rate: number) => {
-            console.log("JUZ KOLBAK");
             if (numberClicked === rate) {
                 return {
                     backgroundColor: "hsl(216, 12%, 54%)",
@@ -37,6 +37,7 @@ export default function RatingForm() {
                     readOnly
                     onClick={() => setNumberClicked(1)}
                     style={selectedInputStyles(1)}
+                    className={styles.input}
                 />
                 <label htmlFor="grade-two" className="visuallyhidden">
                     2
@@ -48,6 +49,7 @@ export default function RatingForm() {
                     readOnly
                     onClick={() => setNumberClicked(2)}
                     style={selectedInputStyles(2)}
+                    className={styles.input}
                 />
                 <label htmlFor="grade-three" className="visuallyhidden">
                     3
@@ -59,6 +61,7 @@ export default function RatingForm() {
                     readOnly
                     onClick={() => setNumberClicked(3)}
                     style={selectedInputStyles(3)}
+                    className={styles.input}
                 />
                 <label htmlFor="grade-four" className="visuallyhidden">
                     4
@@ -70,6 +73,7 @@ export default function RatingForm() {
                     readOnly
                     onClick={() => setNumberClicked(4)}
                     style={selectedInputStyles(4)}
+                    className={styles.input}
                 />
                 <label htmlFor="grade-five" className="visuallyhidden">
                     5
@@ -81,6 +85,7 @@ export default function RatingForm() {
                     readOnly
                     onClick={() => setNumberClicked(5)}
                     style={selectedInputStyles(5)}
+                    className={styles.input}
                 />
             </div>
             <button type="submit" disabled={numberClicked === 0}>
